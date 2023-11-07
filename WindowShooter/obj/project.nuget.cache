@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "4jSwy5peDod7QqVcZ1F7ejeo9KDacRKa3JbMnjWHnuDb4SXLkVNH1Rv+OFR8nyHshQnCTXKfds1ZVT/Ebrultw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sam.lindfors\\Desktop\\Programering\\WindowShooter\\WindowShooter\\WindowShooter.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sam.lindfors\\.nuget\\packages\\raylib-cs\\5.0.0\\raylib-cs.5.0.0.nupkg.sha512",
+    "C:\\Users\\sam.lindfors\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
