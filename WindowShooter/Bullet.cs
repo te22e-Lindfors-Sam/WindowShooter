@@ -16,14 +16,36 @@ class Bullet
         this.speedY = speedY;
     }
 
-    public static void ControllBullets()
+    public static Vector4 ControllBullets(int windowX, int windowY)
     {
-        for (int i = 0; i < bullelts.Count; i++)
-        {   
+        Vector4 windowSizeToAdd = Vector4.Zero;
+        for (int i = bullelts.Count - 1; i > 0; i--)
+        {
             bullelts[i].pos.X += bullelts[i].speedX;
             bullelts[i].pos.Y += bullelts[i].speedY;
             Raylib.DrawCircle((int)bullelts[i].pos.X, (int)bullelts[i].pos.Y, 5, Color.WHITE);
+            if (bullelts[i].pos.Y < 0)
+            {
+                bullelts.Remove(bullelts[i]);
+                windowSizeToAdd.X += 20;
+            }
+            else if (bullelts[i].pos.Y > windowY)
+            {
+                bullelts.Remove(bullelts[i]);
+                windowSizeToAdd.Y += 20;
+            }
+            else if (bullelts[i].pos.X < 0)
+            {
+                bullelts.Remove(bullelts[i]);
+                windowSizeToAdd.Z += 20;
+            }
+            else if (bullelts[i].pos.X > windowX)
+            {
+                bullelts.Remove(bullelts[i]);
+                windowSizeToAdd.W += 20;
+            }
         }
+        return windowSizeToAdd;
     }
 
 }
