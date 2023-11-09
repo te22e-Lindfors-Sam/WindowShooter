@@ -27,22 +27,22 @@ class Bullet
             if (bullelts[i].pos.Y < 0)
             {
                 bullelts.Remove(bullelts[i]);
-                windowSizeToAdd.X += 20;
+                windowSizeToAdd.X += 50;
             }
             else if (bullelts[i].pos.Y > windowY)
             {
                 bullelts.Remove(bullelts[i]);
-                windowSizeToAdd.Y += 20;
+                windowSizeToAdd.Y += 50;
             }
             else if (bullelts[i].pos.X < 0)
             {
                 bullelts.Remove(bullelts[i]);
-                windowSizeToAdd.Z += 20;
+                windowSizeToAdd.Z += 50;
             }
             else if (bullelts[i].pos.X > windowX)
             {
                 bullelts.Remove(bullelts[i]);
-                windowSizeToAdd.W += 20;
+                windowSizeToAdd.W += 50;
             }
         }
         return windowSizeToAdd;
